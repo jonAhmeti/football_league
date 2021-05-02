@@ -1,0 +1,106 @@
+﻿@model FootballLeague.Models.League
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<br/>
+<h2>Details for league @Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <h4>League</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Format)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Format)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfClubs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfClubs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalMatches)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalMatches)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchesCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchesCompleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalGameWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGameWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Progress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Progress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageGoalsPerMatch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageGoalsPerMatch)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

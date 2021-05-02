@@ -1,0 +1,268 @@
+﻿@model FootballLeague.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of player @Html.DisplayFor(model => model.FullName)</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Full Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+
+        <dd>
+
+            @DateTimeOffset.FromUnixTimeSeconds(Model.Birthday).ToLocalTime()
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.League)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.League)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            Current Club
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentClub)
+        </dd>
+
+        <dt>
+            Total Minutes Played
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedOverall)
+        </dd>
+
+        <dt>
+            Minutes Played as Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedHome)
+        </dd>
+
+        <dt>
+            Minutes Played as Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            Total Appearances
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesOverall)
+        </dd>
+
+        <dt>
+            Home Appearances
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesHome)
+        </dd>
+
+        <dt>
+            Away Appearances
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesAway)
+        </dd>
+
+        <dt>
+            Total Goals Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsOverall)
+        </dd>
+
+        <dt>
+            Home Goals Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsHome)
+        </dd>
+
+        <dt>
+            Away Goals Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsAway)
+        </dd>
+
+        <dt>
+            Total Assists
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsOverall)
+        </dd>
+
+        <dt>
+            Home Assists
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsHome)
+        </dd>
+
+        <dt>
+            Away Assists
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsAway)
+        </dd>
+
+        <dt>
+            Penalty Goals Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltyGoals)
+        </dd>
+
+        <dt>
+            Penalty Goals Missed
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltyMisses)
+        </dd>
+
+        <dt>
+            Total Yellow Cards
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowCardsOverall)
+        </dd>
+
+        <dt>
+            Total Red Cards
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RedCardsOverall)
+        </dd>
+
+        <dt>
+            Avg. Minutes Played per Match
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerMatch)
+        </dd>
+
+        <dt>
+            Avg. Minutes per Card
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerCardOverall)
+        </dd>
+
+        <dt>
+            Avg. Minutes per Assists
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerAssistOverall)
+        </dd>
+
+        <dt>
+            Top Attackers Rank
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopAttackers)
+        </dd>
+
+        <dt>
+            Top Midfielders Rank
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopMidfielders)
+        </dd>
+
+        <dt>
+            Top Defenders Rank
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopDefenders)
+        </dd>
+
+        <dt>
+            Top Scorer Rank
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInClubTopScorer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })<br />
+    @Html.ActionLink("Delete", "Delete", new {id = Model.Id})<br/>
+    @Html.ActionLink("Back to List", "Index")
+</p>

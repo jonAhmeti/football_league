@@ -1,0 +1,275 @@
+﻿@model FootballLeague.Models.Match
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of the match</h2>
+
+<div>
+    <h4>Match</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Timestamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timestamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateGMT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateGMT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attendance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attendance)
+        </dd>
+
+        <dt>
+            Home Team Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamName)
+        </dd>
+
+        <dt>
+            Away Team Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamName)
+        </dd>
+
+        <dt>
+            Home Team Goals
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamGoalCount)
+        </dd>
+
+        <dt>
+            Away Team Goals
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamGoalCount)
+        </dd>
+
+        <dt>
+            Total Goal Count
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGoalCount)
+        </dd>
+
+        <dt>
+            Total Goals Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGoalsAtHalfTime)
+        </dd>
+
+        <dt>
+            HT Goals at Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamGoalCountHalfTime)
+        </dd>
+
+        <dt>
+            AT Goals at Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamGoalCountHalfTime)
+        </dd>
+
+        <dt>
+            Home Team Goal Timings
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamGoalTimings)
+        </dd>
+
+        <dt>
+            Away Team Goal Timings
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamGoalTimings)
+        </dd>
+
+        <dt>
+            Home Team Corners
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamCornerCount)
+        </dd>
+
+        <dt>
+            Away Team Corners
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamCornerCount)
+        </dd>
+
+        <dt>
+            Yellow Cards Home Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamYellowCards)
+        </dd>
+
+        <dt>
+            Red Cards Home Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamRedCards)
+        </dd>
+
+        <dt>
+            Yellow Cards Away Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamYellowCards)
+        </dd>
+
+        <dt>
+            Red Cards Away Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamRedCards)
+        </dd>
+
+        <dt>
+            Home Team Shots
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamShots)
+        </dd>
+
+        <dt>
+            Away Team Shots
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamShots)
+        </dd>
+
+        <dt>
+            HT Shots On Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamShotsOnTarget)
+        </dd>
+
+        <dt>
+            AT Shots On Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamShotsOnTarget)
+        </dd>
+
+        <dt>
+            HT Shots Off Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamShotsOffTarget)
+        </dd>
+
+        <dt>
+            AT Shots Off Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamShotsOffTarget)
+        </dd>
+
+        <dt>
+            Fouls Home Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamFouls)
+        </dd>
+
+        <dt>
+            Fouls Away Team
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamFouls)
+        </dd>
+
+        <dt>
+            Home Team Possesion Time
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamPossession)
+        </dd>
+
+        <dt>
+            Away Team Possesion time
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamPossession)
+        </dd>
+
+        <dt>
+            Avg. Goals per Match preMatch
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageGoalsPerMatchPreMatch)
+        </dd>
+
+        <dt>
+            Stadium Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StadiumName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.Id})<br/>
+    @Html.ActionLink("Delete", "Delete", new { id=Model.Id }) <br/>
+    @Html.ActionLink("Back to List", "Index")
+</p>

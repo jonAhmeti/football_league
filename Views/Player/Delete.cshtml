@@ -1,0 +1,274 @@
+﻿@model FootballLeague.Models.Player
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.League)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.League)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentClub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentClub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinutesPlayedOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinutesPlayedHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinutesPlayedAway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPlayedAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppearancesOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppearancesHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppearancesAway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppearancesAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalsOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalsHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalsAway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistsOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistsHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistsAway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistsAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PenaltyGoals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltyGoals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PenaltyMisses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltyMisses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YellowCardsOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowCardsOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RedCardsOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RedCardsOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPerMatch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerMatch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPerCardOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerCardOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPerAssistOverall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPerAssistOverall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankInLeagueTopAttackers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopAttackers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankInLeagueTopMidfielders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopMidfielders)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankInLeagueTopDefenders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInLeagueTopDefenders)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankInClubTopScorer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankInClubTopScorer)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default"
+                   onclick="location.href='@Url.Action("Delete", "PlayerController", @Model.Id)'"/>
+
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

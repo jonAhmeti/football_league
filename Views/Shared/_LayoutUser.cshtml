@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/football/main.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        footer {
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        hr {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .body-content {
+            margin-top: 50px;
+        }
+
+        .clearthis {
+            all: initial;
+        }
+        .dropFilter {
+            float: left;
+        }
+        .labelfilet {
+            float: left;
+        }
+        #sort_container {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        #div_sortBy {
+            width: 50%;
+            display: inline-block;
+            float: left;
+        }
+        #div_searchBy {
+            width: 50%;
+            display: inline-block;
+            float: left;
+        }
+        #lbl_searchBy,#lbl_sortBy {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 1em;
+        }
+
+        #drop_sortBy,#drop_searchBy {
+            margin: auto;
+        }
+        
+        #formSort,#formSearch {
+            margin: 0;
+        }
+
+        #div_searchBySelection,#div_searchbar {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }
+        #inputSearchBy,#inputSearchBy:focus {
+            margin: 0;
+            border: none;
+            border-bottom: 1px solid #4e4e4e;
+            background: none;
+            width: 80%;
+            outline: none;
+            border-color: inherit;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        #searchicon {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Football League", "", "", new { area = "" }, new { @class = "navbar-brand",style="text-decoration:none"})
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Leagues", "Index", "UserLeague", new { area = "" }, new { style = "text-decoration:none" })</li>
+                <li>@Html.ActionLink("Players", "Index", "UserPlayer", new { area = "" }, new { style = "text-decoration:none" })</li>
+                <li>@Html.ActionLink("Teams", "Index", "UserTeam", new { area = "" }, new { style = "text-decoration:none" })</li>
+                <li>@Html.ActionLink("Matches", "Index", "UserMatch", new { area = "" }, new { style = "text-decoration:none" })</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+    @RenderBody()
+    
+
+    <!-- ______________________________________________ FOOTER STARTS ________________________________________________________ -->
+    <footer id="footer" class="wrapper" style="background: #444; padding: 30px;margin-top:30%">
+        <div class="inner">
+            <section>
+                    <div class="content">
+                        <h2 class="align-center" style="color: white">Get in Touch</h2>
+                        <hr />
+                        <form action="#" method="post">
+                            <div class="field half first">
+                                <label for="name" style="color: white">Name</label>
+                                <input name="name" style="color: whitesmoke" id="name" type="text" placeholder="Name">
+                            </div>
+                            <div class="field half">
+                                <label for="email" style="color: white">Email</label>
+                                <input name="email" style="color: whitesmoke" id="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="field">
+                                <label for="dept" style="color: white">Department</label>
+                                <div class="select-wrapper">
+                                    <select style="color: whitesmoke;background: #444444" name="dept" id="dept">
+                                        <option value="">- Category -</option>
+                                        <option value="1">Manufacturing</option>
+                                        <option value="1">Shipping</option>
+                                        <option value="1">Administration</option>
+                                        <option value="1">Human Resources</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="message" style="color: white">Message</label>
+                                <textarea style="color: whitesmoke" name="message" id="message" rows="6" placeholder="Message"></textarea>
+                            </div>
+                            <ul class="actions align-center">
+                                <li><input value="Send Message" class="button special" type="submit"></li>
+                            </ul>
+                        </form>
+                    </div>
+            </section>
+            <div class="copyright">
+                &copy; 2020 Jon Ahmeti
+            </div>
+        </div>
+    </footer>
+    <!-- ____________________________________________ FOOTER ENDS ___________________________________________________-->
+    <!-- SCRIPTS-->
+    <script>
+        //Sort DropDownList script; on selection changed
+        document.getElementById("drop_sortBy").addEventListener("change", function(){
+            formSort.submit();
+        });
+
+        //Search input script; on press Enter key
+        
+        document.getElementById("inputSearchBy").addEventListener("keydown", function (e) {
+            if (e.keyCode === 13) {  //checks whether the pressed key is "Enter", 13 = ASCII Code of Enter
+                formSearch.submit();
+            }
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/footballScripts")
+    @RenderSection("scripts", required: false)
+    
+    <!-- SCRIPTS END-->
+</div>
+</body>
+</html>

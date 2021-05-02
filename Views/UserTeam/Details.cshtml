@@ -1,0 +1,650 @@
+﻿@model FootballLeague.Models.Team
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<br/>
+<h2>Details for team @Html.DisplayFor(model => model.TeamName)</h2>
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Team Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamName)
+        </dd>
+
+        <dt>
+            Common Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            Matches Played
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchesPlayed)
+        </dd>
+
+        <dt>
+            Matches Played as Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchesPlayedHome)
+        </dd>
+
+        <dt>
+            Matches Played as Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchesPlayedAway)
+        </dd>
+
+        <dt>
+            Matches Suspended
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuspendedMatches)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wins)
+        </dd>
+
+        <dt>
+            Home Wins
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WinsHome)
+        </dd>
+
+        <dt>
+            Away Wins
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WinsAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Draws)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Draws)
+        </dd>
+
+        <dt>
+            Home Draws
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrawsHome)
+        </dd>
+
+        <dt>
+            Away Draws
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrawsAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Losses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Losses)
+        </dd>
+
+        <dt>
+            Home Losses
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LossesHome)
+        </dd>
+
+        <dt>
+            Away Losses
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LossesAway)
+        </dd>
+
+        <dt>
+            Points Per Game
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PointsPerGame)
+        </dd>
+
+        <dt>
+            Points Per Game Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PointsPerGameHome)
+        </dd>
+
+        <dt>
+            Points Per Game Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PointsPerGameAway)
+        </dd>
+
+        <dt>
+            League Position
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaguePosition)
+        </dd>
+
+        <dt>
+            League Position Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaguePositionHome)
+        </dd>
+
+        <dt>
+            League Position Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaguePositionAway)
+        </dd>
+
+        <dt>
+            Performance Rank
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerformanceRank)
+        </dd>
+
+        <dt>
+            Goals Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScored)
+        </dd>
+
+        <dt>
+            Goal Difference
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifference)
+        </dd>
+
+        <dt>
+            Total Goal Count
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGoalCount)
+        </dd>
+
+        <dt>
+            Total Goals Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGoalCountHome)
+        </dd>
+
+        <dt>
+            Total Goals Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGoalCountAway)
+        </dd>
+
+        <dt>
+            Goals Scored Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScoredHome)
+        </dd>
+
+        <dt>
+            Goals Scored Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScoredAway)
+        </dd>
+
+        <dt>
+            Goal Difference Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifferenceHome)
+        </dd>
+
+        <dt>
+            Goal Difference Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifferenceAway)
+        </dd>
+
+        <dt>
+            Minutes Per Goal Scored
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPerGoalScored)
+        </dd>
+
+        <dt>
+            Minutes Per Goal Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPerGoalScoredHome)
+        </dd>
+
+        <dt>
+            Minutes Per Goal Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinutesPerGoalScoredAway)
+        </dd>
+
+        <dt>
+            First Team To Score Count
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstTeamToScoreCount)
+        </dd>
+
+        <dt>
+            FTTSC Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstTeamToScoreCountHome)
+        </dd>
+
+        <dt>
+            FTTSC Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstTeamToScoreCountAway)
+        </dd>
+
+        <dt>
+            Total Corners
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersTotal)
+        </dd>
+
+        <dt>
+            Corners Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersTotalHome)
+        </dd>
+
+        <dt>
+            Corners Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersTotalAway)
+        </dd>
+
+        <dt>
+            Cards Total
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsTotal)
+        </dd>
+
+        <dt>
+            Cards Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsTotalHome)
+        </dd>
+
+        <dt>
+            Cards Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsTotalAway)
+        </dd>
+
+        <dt>
+            Average Possesion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AveragePossession)
+        </dd>
+
+        <dt>
+            Avg. Possesion Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AveragePossessionHome)
+        </dd>
+
+        <dt>
+            Avg. Possession Away)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AveragePossessionAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shots)
+        </dd>
+
+        <dt>
+            Shots Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsHome)
+        </dd>
+
+        <dt>
+            Shots Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsAway)
+        </dd>
+
+        <dt>
+            Shots On Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOnTarget)
+        </dd>
+
+        <dt>
+            Shots On Target Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOnTargetHome)
+        </dd>
+
+        <dt>
+            Shots On Target Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOnTargetAway)
+        </dd>
+
+        <dt>
+            Shots Off Target
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOffTarget)
+        </dd>
+
+        <dt>
+            Shots Off Target Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOffTargetHome)
+        </dd>
+
+        <dt>
+            Shots Off Target Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShotsOffTargetAway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fouls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fouls)
+        </dd>
+
+        <dt>
+            Fouls Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoulsHome)
+        </dd>
+
+        <dt>
+            Fouls Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoulsAway)
+        </dd>
+
+        <dt>
+            Goals Scored Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScoredHalfTime)
+        </dd>
+
+        <dt>
+            Goals Scored Halftime Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScoredHalfTimeHome)
+        </dd>
+
+        <dt>
+            Goals Scored Halftime Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScoredHalfTimeAway)
+        </dd>
+
+        <dt>
+            Goals Conceded Half Time
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsConcededHalfTime)
+        </dd>
+
+        <dt>
+            Goals Conceded Half Time Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsConcededHalfTimeHome)
+        </dd>
+
+        <dt>
+            Goals Conceded Half Time Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsConcededHalfTimeAway)
+        </dd>
+
+        <dt>
+            Goal Difference Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifferenceHalfTime)
+        </dd>
+
+        <dt>
+            Goal Difference Halftime Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifferenceHalfTimeHome)
+        </dd>
+
+        <dt>
+            Goal Difference Halftime Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalDifferenceHalfTimeAway)
+        </dd>
+
+        <dt>
+            Leading At Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeadingAtHalfTime)
+        </dd>
+
+        <dt>
+            Leading At Halftime Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeadingAtHalfTimeHome)
+        </dd>
+
+        <dt>
+            Leading At Halftime Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeadingAtHalfTimeAway)
+        </dd>
+
+        <dt>
+            Draw At Halftime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrawAtHalfTime)
+        </dd>
+
+        <dt>
+            Corners Per Match
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersPerMatch)
+        </dd>
+
+        <dt>
+            Corners Per Match Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersPerMatchHome)
+        </dd>
+
+        <dt>
+            Corners Per Match Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CornersPerMatchAway)
+        </dd>
+
+        <dt>
+            Cards Per Match
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsPerMatch)
+        </dd>
+
+        <dt>
+            Cards Per Match Home
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsPerMatchHome)
+        </dd>
+
+        <dt>
+            Cards Per Match Away
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardsPerMatchAway)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
